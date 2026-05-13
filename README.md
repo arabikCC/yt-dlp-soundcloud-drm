@@ -30,7 +30,7 @@ pip install .
 ## Usage
 
 ```bash
-yt-dlp --use-postprocessor "Mp4Decrypt:when=before_dl;devicepath=/path/to/device.wvd" "TRACK_URL"
+yt-dlp --use-postprocessor "Mp4Decrypt:when=before_dl;devicepath=/path/to/device.wvd" --allow-unplayable-formats "TRACK_URL"
 ```
 
 ### Options

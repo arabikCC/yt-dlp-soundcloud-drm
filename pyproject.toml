@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yt-dlp-soundcloud-drm"
+version = "1.0.0"
+description = "A yt-dlp plugin for downloading and decrypting Widevine-protected SoundCloud tracks"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "curl-cffi",
+    "pywidevine",
+]
+authors = [
+    { name = "arabik" },
+]
+keywords = ["yt-dlp", "soundcloud", "drm", "widevine", "downloader"]

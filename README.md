@@ -33,12 +33,21 @@ pip install .
 yt-dlp --use-postprocessor "Mp4Decrypt:when=before_dl;devicepath=/path/to/device.wvd" --allow-unplayable-formats "TRACK_URL"
 ```
 
+On Windows `cmd.exe`, always wrap the URL in quotes. Query strings contain `&`, which `cmd` treats as command separators.
+
+If you get `KeyError: 'Mp4DecryptPP'`, your current `yt-dlp` runtime did not load this plugin. Use the same Python environment where you installed the package:
+
+```bash
+python -m yt_dlp --use-postprocessor "Mp4Decrypt:when=before_dl;devicepath=C:\path\to\device.wvd" --allow-unplayable-formats "TRACK_URL"
+```
+
 ### Options
 | Option | Description |
 |---|---|
 | `devicepath` | Absolute path to your `.wvd` file |
 | `when=before_dl` | Ensures keys are fetched before download starts |
 | `--impersonate chrome` | Optional. May help if you encounter WAF blocks |
+
 
 *Created for personal use.*
 
